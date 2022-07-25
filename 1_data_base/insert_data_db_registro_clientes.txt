@@ -1,0 +1,87 @@
+/*------------CREAR TABLA CLIENTES 1 -----------*/
+
+INSERT INTO CLIENTES (ID_CLIENTE, NOMBRE1, NOMBRE2, APELLIDO1, APELLIDO2, TELEFONO, EMAIL)
+VALUES 
+(NULL, 'MI1', 'JAVIER1', 'RA1', 'RE1', '22222221', 'javier1@gmail.com'),    
+(NULL, 'MI2', 'JAVIER2', 'RA2', 'RE2', '22222222', 'javier2@gmail.com'),    
+(NULL, 'MI3', 'JAVIER3', 'RA3', 'RE3', '22222223', 'javier3@gmail.com'),    
+(NULL, 'MI4', 'JAVIER4', 'RA4', 'RE4', '22222224', 'javier4@gmail.com'),    
+(NULL, 'MI5', 'JAVIER5', 'RA5', 'RE5', '22222225', 'javier5@gmail.com'),
+(NULL, 'MI6', 'JAVIER6', 'RA6', 'RE6', '22222226', 'javier6@gmail.com'); 
+
+
+/*------------CREAR TABLA DOCUMENTOS 2 -----------*/
+
+INSERT INTO DOCUMENTOS (ID_DOCUMENTO, NOMBRE_DOCUMENTO, NUMERO_DOCUMENTO, ID_CLIENTE)
+VALUES
+(NULL, 'DUI', '000000001', 1),
+(NULL, 'NIT', '00000000000001', 1),
+(NULL, 'PASAPORTE', '00000001', 1),
+(NULL, 'DUI', '000000002', 2),
+(NULL, 'NIT', '00000000000002', 2),
+(NULL, 'PASAPORTE', '00000002', 2),
+(NULL, 'DUI', '000000003', 3),
+(NULL, 'NIT', '00000000000003', 3),
+(NULL, 'PASAPORTE', '00000003', 3),
+(NULL, 'DUI', '000000004', 4),
+(NULL, 'NIT', '00000000000004', 4),
+(NULL, 'PASAPORTE', '00000004', 4),
+(NULL, 'DUI', '000000004', 5),
+(NULL, 'NIT', '00000000000005', 5),
+(NULL, 'PASAPORTE', '00000005', 5);
+
+/*------------CREAR TABLA DEPARTAMENTOS 3 -----------*/
+
+INSERT INTO DEPARTAMENTOS (ID_DEPARTAMENTO, NOMBRE_DEPARTAMENTO)
+VALUES
+(NULL, 'Ahuachapán'),
+(NULL, 'Cabañas'),
+(NULL, 'Chalatenango'),
+(NULL, 'Cuscatlán'),
+(NULL, 'La Libertad'),
+(NULL, 'La Paz'),
+(NULL, 'La Unión'),
+(NULL, 'Morazán'),
+(NULL, 'San Miguel'),
+(NULL, 'San Salvador'),
+(NULL, 'San Vicente'),
+(NULL, 'Santa Ana'),
+(NULL, 'Sonsonate'),
+(NULL, 'Usulután');
+
+/*------------CREAR TABLA DIRECCIONES 4 -----------*/
+
+INSERT INTO DIRECCIONES (ID_DIRECCION, DIRECCION, MUNICIPIO, ID_DEPARTAMENTO, ID_CLIENTE)
+VALUES
+(NULL, 'COLONIA CASA 1', 'Soyapango', 10, 1),
+(NULL, 'COLONIA CASA 2', 'San Salvador', 10, 1),
+(NULL, 'COLONIA CASA 3', 'San Martin', 10, 1),
+(NULL, 'COLONIA CASA 4', 'La Unión', 7, 2),
+(NULL, 'COLONIA CASA 5', 'Santa Rosa de Lima', 7, 2),
+(NULL, 'COLONIA CASA 6', 'Lislique', 7, 2),
+(NULL, 'COLONIA CASA 7', 'Torola', 8, 3),
+(NULL, 'COLONIA CASA 8', 'San Francisco Gotera', 8, 3),
+(NULL, 'COLONIA CASA 9', 'San Fernando', 8, 3),
+(NULL, 'COLONIA CASA 10', 'San Miguel', 9, 4),
+(NULL, 'COLONIA CASA 11', 'Lolotique', 9, 4),
+(NULL, 'COLONIA CASA 12', 'Chirilagua', 9, 4),
+(NULL, 'COLONIA CASA 13', 'Arcatao', 3, 5),
+(NULL, 'COLONIA CASA 14', 'Chalatenango', 3, 5),
+(NULL, 'COLONIA CASA 15', 'El Carrizal', 3, 5);
+
+/*---------------------------------------------*/
+
+/*------------CREAR TABLA ROLES  6 -----------*/
+
+INSERT  INTO ROLES (ID_ROL, NOMBRE_ROL)
+VALUES
+(NULL, 'Admin'),
+(NULL, 'User');
+
+/*------------CREAR TABLA ADMINS 7 -----------*/
+
+INSERT INTO ADMINS (ID_ADMIN, NOMBRE_ADMIN, PASSWORD_ADMIN, ID_ROL)
+VALUES
+(NULL, 'JAV1', SHA1('12345678'), 1),
+(NULL, 'DIM2', SHA1('87654321'), 1);
+
